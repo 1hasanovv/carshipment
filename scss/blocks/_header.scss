@@ -1,0 +1,75 @@
+.site-header {
+    padding: 20px 0;
+    background-color: #0000004D;
+    z-index: 50;
+    position: fixed;
+    width: 100%;
+    backdrop-filter: blur(50px);
+}
+
+.header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.header__logo-link {
+    display: inline-block;
+}
+.header__logo-img {
+}
+.header__logo-links {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 50px;
+}
+.header__list {
+    display: flex;
+    align-items: center;
+    gap: 25px;
+}
+.navbar {
+}
+.navbar__item {
+}
+.navbar__link {
+    font-size: 16px;
+    font-weight: 500;
+    color: $white-color;
+    line-height: 19.36px;
+    text-transform: uppercase;
+    transition: all 0.3s linear;
+    &:hover{
+        color: $orange-color;
+    }
+}
+.header__phone-link {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+
+    & > svg > rect, > svg > path{
+        transition: all 0.3s linear;
+    }
+    &:hover > svg{
+        transition: all 0.3s linear;
+        border: 2px solid $orange-color;
+        border-radius: 51%;
+    }
+    &:hover > svg > rect{
+        fill: $white-color;
+    }
+    &:hover > svg > path{
+        fill: $orange-color;
+    }
+    &:hover > .header__phone-number{
+        color: $orange-color;
+    }
+}
+.header__phone-number {
+    color: $white-color;
+    font-size: 16px;
+    font-weight: 500;
+    line-height: 19.36px;
+    transition: all 0.3s linear;
+}
