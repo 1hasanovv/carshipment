@@ -8,9 +8,7 @@
 }
 
 .header {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
+    @include display($items:center, $space:space-between, $gap:none);
 }
 .header__logo-link {
     display: inline-block;
@@ -18,35 +16,25 @@
 .header__logo-img {
 }
 .header__logo-links {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    gap: 50px;
+    @include display($items:center, $space:space-between, $gap:50px);
 }
 .header__list {
-    display: flex;
-    align-items: center;
-    gap: 25px;
+    @include display($items:center, $space:none, $gap:25px);
 }
 .navbar {
 }
 .navbar__item {
 }
 .navbar__link {
-    font-size: 16px;
-    font-weight: 500;
-    color: $white-color;
-    line-height: 19.36px;
-    text-transform: uppercase;
+    @include textStyle($MB:none, $FS:16px, $FW:500, $CLR:$white-color, $LH:19.36px, $CASE:uppercase);
+
     transition: all 0.3s linear;
     &:hover{
         color: $orange-color;
     }
 }
 .header__phone-link {
-    display: flex;
-    align-items: center;
-    gap: 10px;
+    @include display($items:center, $space:none, $gap:10px);
 
     & > svg > rect, > svg > path{
         transition: all 0.3s linear;
@@ -67,9 +55,6 @@
     }
 }
 .header__phone-number {
-    color: $white-color;
-    font-size: 16px;
-    font-weight: 500;
-    line-height: 19.36px;
+    @include textStyle($MB:none, $FS:16px, $FW:500, $CLR:$white-color, $LH:19.36px, $CASE:uppercase);
     transition: all 0.3s linear;
 }
